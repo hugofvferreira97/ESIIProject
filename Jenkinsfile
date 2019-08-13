@@ -14,11 +14,6 @@ pipeline {
                 sh 'gradle wrapper check'
             }
         }
-        post {
-            always {
-                junit 'build/reports/**/*.xml'
-            }
-        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
