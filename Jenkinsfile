@@ -1,17 +1,17 @@
 pipeline {
     agent any
-    gradle wrapper
+
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh './gradlew build'
+                sh 'gradle wrapper build'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh './gradlew check'
+                sh 'graddle wrapper check'
             }
         }
         post {
