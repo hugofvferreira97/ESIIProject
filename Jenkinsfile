@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh './gradlew build'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'gradle wrapper check'
+                sh './gradlew check'
             }
         }
         stage('Deploy') {
@@ -19,10 +20,9 @@ pipeline {
             }
         }
     }
-    post {
-            always {
-                archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-                junit 'build/reports/**/*.xml'
-            }
-    }
+     post {
+        always {
+            junit 'build/reports/**/*.xml'
+        }
+     }
 }
