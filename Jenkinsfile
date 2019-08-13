@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                sh 'gradle wrapper build'
             }
         }
         stage('Test') {
