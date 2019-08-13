@@ -11,7 +11,7 @@ public class ESIIFunctionsTest {
     }
 
     @Test
-    void failReturnOne() {
+    public void failReturnOne() {
         assertEquals(2, new ESIIFunctions().returnOne());
     }
 }
