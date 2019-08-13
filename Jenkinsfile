@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    Graddle Wrapper
+    gradle wrapper
     stages {
         stage('Build') {
             steps {
