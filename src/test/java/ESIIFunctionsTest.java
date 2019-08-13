@@ -10,8 +10,8 @@ public class ESIIFunctionsTest {
         assertEquals(1, new ESIIFunctions().returnOne());
     }
 
-    @Test
-    public void failReturnOne() {
-        assertEquals(2, new ESIIFunctions().returnOne());
-    }
+//    @Test
+//    public void failReturnOne() {
+//        assertEquals(2, new ESIIFunctions().returnOne());
+//    }
 }
