@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'graddle wrapper check'
+                sh 'gradle wrapper check'
             }
         }
         post {
